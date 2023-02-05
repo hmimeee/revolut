@@ -1,0 +1,34 @@
+{
+    "name": "hmimeee/revolut",
+    "description": "A package to integrate Revolut payment gateway. Revolut is a British financial technology company that offers banking services, but as of December 2022 does not have a UK banking licence.",
+    "keywords": [
+        "revolut",
+        "payment gateway",
+        "api"
+    ],
+    "homepage": "https://revolut.com/",
+    "autoload": {
+        "psr-4": {
+            "Hmimeee\\Revolut\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Hossain Mohammad Imran",
+            "email": "hmimeee@gmail.com",
+            "homepage": "https://hmime.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "*"
+    }
+}
