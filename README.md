@@ -45,7 +45,7 @@ $response = $revolut->createOrder([
 ]);
 
 if ($response['status']) {
-    $orderId = $order['data']->id; //Keep the Order ID to verify the payment in the Webhook Endpoint.
+    $orderId = $response['data']->id; //Keep the Order ID to verify the payment in the Webhook Endpoint.
     
     header("location:" . $response['data']->checkout_url);
 } else {
