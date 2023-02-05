@@ -1,6 +1,6 @@
 <?php
 
-use Hmimeee\Revolut;
+use Hmimeee\Revolut\Revolut;
 
 if (!function_exists('getRevolut')) {
     /**

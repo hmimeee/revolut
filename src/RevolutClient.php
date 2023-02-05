@@ -1,6 +1,6 @@
 <?php
 
-namespace Hmimeee;
+namespace Hmimeee\Revolut;
 
 class RevolutClient
 {

@@ -7,14 +7,6 @@
         "api"
     ],
     "homepage": "https://revolut.com/",
-    "autoload": {
-        "psr-4": {
-            "Hmimeee\\Revolut\\": "src/"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
-    },
     "authors": [
         {
             "name": "Hossain Mohammad Imran",
@@ -29,6 +21,22 @@
         "ext-mbstring": "*"
     },
     "require-dev": {
-        "guzzlehttp/guzzle": "*"
+        "guzzlehttp/guzzle": "*",
+        "phpunit/phpunit": "^5.7 || ^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hmimeee\\Revolut\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hmimeee\\Revolut\\": [
+                "tests/"
+            ]
+        }
     }
 }
