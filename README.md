@@ -36,7 +36,7 @@ $revolut = getRevolut([
     'env' => 'sandbox', //or, live
     'key' => 'Your marchant secret key here'
 ]);
-$order = $revolut->createOrder([
+$response = $revolut->createOrder([
     'amount' => 1210, //The amount must be the smallest currency unit like (from $12.10 to 1210)
     'currency' => 'GBP',
     'description' => 'An example order', //Can skip it as it's optional.
@@ -44,12 +44,12 @@ $order = $revolut->createOrder([
     'email' => 'email@example.com', //Can skip it as it's optional.
 ]);
 
-if ($order['status']) {
+if ($response['status']) {
     $orderId = $order['data']->id; //Keep the Order ID to verify the payment in the Webhook Endpoint.
     
-    header("location:" . $oder['data']->checkout_url);
+    header("location:" . $response['data']->checkout_url);
 } else {
-    echo $oder['message'];
+    echo $response['message'];
 }
 ```
 
